@@ -19,7 +19,7 @@ export const LoginUser = async (value) =>{
         const response = await axiosInstance.post("api/users/login", value);
         return response.data
     } catch (error) {
-        console.log(error);
+        console.log("error", error);
     }
 }
 
@@ -27,6 +27,7 @@ export const LoginUser = async (value) =>{
 export const GetCurrentUser = async () =>{
     try {
         const response = await axiosInstance.get('api/users/get-current-user')
+        // console.log(response);
         return response.data
     } catch (error) {
        console.log(error)
